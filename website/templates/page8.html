@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="content">
+    {% for data in data %}
+        {% if data.day == 'Saturday' %}
+        <div class="data">
+            <p class="name">MVP: {{ data.staff_mvp }}</p>
+            <p class="name">Best Seller: {{ data.best_seller }}</p>
+            <p class="name">Worst Seller: {{ data.worst_seller }}</p>
+            <p class="name">Daily Earnings: {{ data.daily_earnings }}</p>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+{% endblock %}
