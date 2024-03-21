@@ -3,6 +3,13 @@ import pandas as pd
 df = pd.read_excel("friday_data.xlsx")
 #print(df)
 
+#STRETCH GOAL-
+#FILTER ROWS WHERE TRANSACTION TYPE IS VOID
+void_transactions = df[df["Transaction Type"] == "Void"]
+#GROUP VOID TRANSACTIONS BY STAFF AND OCCURRENCE
+staff_void_counts = void_transactions["Staff"].value_counts()
+print("Staff with void transactions:\n", staff_void_counts)
+
 #DROP COLUMNS
 df = df.drop(columns=["Unnamed: 0", "Transaction ID", "Transaction Type", "Till ID"])
 #REMOVE THE FIRST ROW
