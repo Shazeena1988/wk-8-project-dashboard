@@ -1,5 +1,4 @@
 from . import db
-import datetime
 
 class Mega(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -12,5 +11,6 @@ class Mega(db.Model):
 
 class Voids(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(30), unique = True)
+    name = db.Column(db.String(30), unique = False)
     voids = db.Column(db.Integer, default=None)
+    transactions = db.Column(db.Integer, default=None)

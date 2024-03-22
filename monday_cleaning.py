@@ -38,6 +38,10 @@ print("Total Income:", total_income)
 highest_spend = df["Cost"].max()
 print("Highest Spend:", highest_spend)
 
+#HOW MANY TIMES EACH STAFF MEMBER USED THE TILL
+staff_till_counts = df["Staff"].value_counts()
+print("Times each staff member used the till:\n", staff_till_counts)
+
 #THE MOST VALUED STAFF MEMBER
 most_common_staff_member = df["Staff"].value_counts().idxmax()
 most_common_staff_member_count = df["Staff"].value_counts().max()
